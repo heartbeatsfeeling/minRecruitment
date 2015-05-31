@@ -1,0 +1,128 @@
+doctype html
+html(lang='zh-CN')
+	head
+		title 微招聘
+		meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+		meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		script(src="/js/lib/jquery-1.11.2.js",type="text/javascript")
+		script(src="/js/lib/bootstrap.min.js",type="text/javascript")
+		script(src="/js/common.js",type="text/javascript")
+		link(type="text/css",rel="stylesheet",href="/css/bootstrap.min.css")
+		link(type="text/css",rel="stylesheet",href="/css/common.css")
+	body
+		.container
+			h1.text-center.title.pd01 面视网助您开启移动面试新时代
+			form.form-horizontal(method='post',action='/save')
+				h2.text-center.sub-h2 编辑招聘信息
+				.pos-baseInfo
+					.form-group
+						label(for='pathName').control-label.col-sm-4 模板密码
+						.col-sm-4
+							input.form-control#pathName(type='text',name='pathName')
+						.col-sm-2
+							a(href='/login',title='已有？',style='vertical-align:-4px;margin-right:4px;') 已有？
+							.error
+					.form-group.line
+						label.control-label.col-sm-4 公司信息
+					.form-group
+						label(for='companyName').control-label.col-sm-4 企业名称
+						.col-sm-4
+							input.form-control#companyName(type='text',name='companyName')
+						.col-sm-2
+							.error
+					.form-group
+						label(for='companyHy').control-label.col-sm-4 行业
+						.col-sm-4
+							input.form-control#companyHy(type='text',name='companyHy')
+						.col-sm-2
+							.error
+					.form-group
+						label(for='companyPosNum').control-label.col-sm-4 人数规模
+						.col-sm-4
+							select.form-control#companyPosNum(type='text',name='companyPosNum')
+								option(value='20人以下') 20人以下
+								option(value='20-50人') 20-50人
+								option(value='50-100人') 50-100人
+								option(value='100-500人') 100-500人
+								option(value='500人') 500人
+						.col-sm-2
+							.error
+					.form-group
+						label(for='companyDesc').control-label.col-sm-4 一句话描述你的企业
+						.col-sm-4
+							textarea.form-control#companyDesc(type='text',name='companyDesc')
+						.col-sm-2
+							.error
+					.form-group
+						label(for='companyTel').control-label.col-sm-4 联系电话
+						.col-sm-4
+							input.form-control#companyTel(type='text',name='companyTel')
+						.col-sm-2
+							.error
+					.form-group
+						label(for='companyEmail').control-label.col-sm-4 HR邮箱
+						.col-sm-4
+							input.form-control#companyEmail(type='text',name='companyEmail')
+						.col-sm-2
+							.error
+				.pos-list
+					.form-group.line
+						label(for='company-name').control-label.col-sm-4 职位信息
+					.pos-item
+						.form-group
+							label.control-label.col-sm-4 职位名称
+							.col-sm-4
+								input.form-control(type='text',name='posName')
+							.col-sm-2
+								.error
+						.form-group
+							label.control-label.col-sm-4 工作职责
+							.col-sm-4
+								textarea.form-control(type='text',name='posJd')
+							.col-sm-2
+								.error
+						.form-group
+							label.control-label.col-sm-4 工作地点
+							.col-sm-4
+								input.form-control(type='text',name='posBase')
+							.col-sm-2
+								.error
+						.form-group
+							label.control-label.col-sm-4 薪资
+							.col-sm-4
+								select.form-control(type='text',name='posMoney')
+									option(value='3K以下') 3K以下
+									option(value='3K-5K') 3K-5K
+									option(value='5K-8K') 5K-8K
+									option(value='8K-10K') 8K-10K
+									option(value='10K-15K') 10K-15K
+									option(value='15K-20K') 15K-20K
+									option(value='20K以上') 20K以上
+							.col-sm-2
+								.error
+						.line
+				.post-add
+					.form-group
+						label(for='pos-jd').control-label.col-sm-4
+						.col-sm-4
+							.text-right.add-pos
+								a.link.del-btn(href='javascript:;',style='margin-right:15px;') 删除职位
+								a.link.add-btn(href='javascript:;') 继续添加职位
+				//.post-skin
+					.form-group
+						.col-sm-4
+						.col-sm-4
+							.btn-group(data-toggle="buttons").text-right
+								label.btn.btn-primary.active 模板1
+									input(value=0,type='radio',name='options',autocomplete="off",checked)
+								label.btn.btn-primary 模板2
+									input(value=1,type='radio',name='options',autocomplete="off")
+								label.btn.btn-primary 模板3
+									input(value=2,type='radio',name='options',autocomplete="off")
+								label.btn.btn-primary 模板4
+									input(value=3,type='radio',name='options',autocomplete="off")
+				.button.clearfix
+					.col-sm-4
+					.col-sm-4.clearfix
+						a.btn.btn-default.submitJD.pull-right 生成移动版招聘信息
+						a.btn.btn-success.saveJD.pull-right 先保存一下

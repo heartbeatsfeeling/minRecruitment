@@ -1,0 +1,26 @@
+doctype html
+html(lang='zh-CN')
+	head
+		title 微招聘编辑
+		meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+		meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		script(src="/js/lib/jquery-1.11.2.js",type="text/javascript")
+		script(src="/js/lib/bootstrap.min.js",type="text/javascript")
+		script(src="/js/common.js",type="text/javascript")
+		link(type="text/css",rel="stylesheet",href="/css/bootstrap.min.css")
+		link(type="text/css",rel="stylesheet",href="/css/common.css")
+	body
+		.container
+			form.form-horizontal(method='post',action='/login').login
+				input(type='text',value='1',style='display:none;')
+				.form-group.clearfix
+					label(for='editPath').control-label.col-sm-4 模板识别码
+					.col-sm-4
+						input.form-control#editPath(type='text',name='editPath')
+					.col-sm-2
+						.error #{error}
+				.button.clearfix
+						.col-sm-4
+						.col-sm-4.clearfix
+							a.btn.btn-default.loginPath.pull-right 进入模板
+							a(href='/').btn.btn-success.pull-right 返回

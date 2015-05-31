@@ -1,0 +1,14 @@
+.top{margin-top:50px;}
+.line{border-bottom:1px solid #cecece;padding-bottom:20px;margin-bottom:20px;}
+.error{display:inline-block;vertical-align: -4px;color:#f00;font-size: 12px;}
+.text{display:inline-block;vertical-align: -8px; }
+.qrCode table{margin:0 auto;}
+.pd01{padding:10px 0;}
+.title{font-size:18px;}
+.sub-h2{font-size: 14px;padding:10px 0;}
+.button{padding-bottom:10px;}
+.submitJD{margin-left:5px;}
+.login{margin-top:100px;}
+.loginPath{margin-left: 10px;}
+.pos-item{margin-bottom: 10px;}
+.pos-item .line{border-bottom: 1px solid #cecece;height:5px;margin:0px auto;width:60%;}
